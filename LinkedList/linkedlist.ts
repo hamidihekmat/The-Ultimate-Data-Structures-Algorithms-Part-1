@@ -25,7 +25,8 @@ class LinkedList {
   }
 
   addLast(node: ListNode) {
-    if (this.last === null) {
+    if (this.first === null) {
+      this.first = node;
       this.last = node;
     } else {
       this.last.next = node;
