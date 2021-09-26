@@ -60,21 +60,14 @@ class LinkedList {
   }
 
   indexOf(value: number) {
-    let found = false;
     let index = 0;
     let node = this.first;
     while (node !== null) {
-      console.log(`Node value ${node.value}`, value);
-
       if (node.value === value) {
-        found = true;
-        break;
+        return index;
       }
       node = node.next;
       index++;
-    }
-    if (found) {
-      return index;
     }
     return null;
   }
@@ -99,4 +92,4 @@ linkedlist.addLast(node2);
 linkedlist.addLast(node3);
 linkedlist.addLast(node4);
 
-console.log(linkedlist.indexOf(3));
+console.log(linkedlist.indexOf(6));
